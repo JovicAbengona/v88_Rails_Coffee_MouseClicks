@@ -1,0 +1,64 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$main_font: verdana, arial, helvetica, sans-serif;
+$primary_color: #edf6f9;
+$accent: #d62828;
+$accent_2: #003049;
+
+body{
+    font-family: $main_font;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    .container{
+        .left{
+            display: inline-block;
+            vertical-align: top;
+            min-height: 100vh;
+            width: 1186px;
+            margin: 0;
+            p{
+                background-color: lighten($accent, 40%);
+                text-align: center;
+                font-size: 14px;
+                color: $accent;
+                padding: 5px;
+                margin: 0;
+            }
+            .canvas{
+                min-height: 100vh;
+                .danger_zones{
+                    // background-color: $accent; // Add to easily simulate detonating a bomb
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        .events{
+            background-color: lighten($accent_2, 70%);
+            display: inline-block;
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow: auto;
+            width: 350px;
+            margin: 0;
+            p:first-child{
+                background-color: lighten($accent_2, 50%);
+                text-align: center;
+                font-size: 14px;
+                color: $accent_2;
+                padding: 5px;
+                margin: 0;
+            }
+            p:not(:first-child){
+                text-align: center;
+                span{
+                    font-weight: bold;
+                    color: $accent_2;
+                    display: block;
+                }
+            }
+        }
+    }
+}
